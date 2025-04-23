@@ -140,15 +140,15 @@
   }
   
   .story-img.adventure {
-    background-image: url("adventure.jpg");
+    background-image: url("images/adventure.jpg");
   }
   
   .story-img.fantasy {
-    background-image: url("fantasy.jpg");
+    background-image: url("images/fantasy.jpg");
   }
   
   .story-img.mystery {
-    background-image: url("mystery.jpg");
+    background-image: url("images/mystery.jpg");
   }
   
   /* Footer */
