@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryHatch - Create Your Story</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <!-- Homepage -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span class="logo-text">StoryHatch</span></h1>
+      <p class="tagline">Empowering young imaginations, promoting diversity, and creating fair stories together!
+    </p>
+      <div class="cta-buttons">
+        <button class="primary-btn" onclick="startNewStory()"><i class="fas fa-pencil-alt"></i> Start New Story</button>
+        <button class="secondary-btn" onclick="exploreStories()"><i class="fas fa-book-open"></i> Explore Stories</button>
+      </div>
+    </div>
+    <div class="featured-stories">
+      <h2>Featured Stories</h2>
+      <div class="story-cards">
+        <div class="story-card">
+          <div class="story-img adventure"></div>
+          <h3>The Lost Compass</h3>
+          <p>An adventure through uncharted territories</p>
+        </div>
+        <div class="story-card">
+          <div class="story-img fantasy"></div>
+          <h3>Dragon's Whisper</h3>
+          <p>A fantasy tale of ancient magic</p>
+        </div>
+        <div class="story-card">
+          <div class="story-img mystery"></div>
+          <h3>Shadow Detective</h3>
+          <p>A mystery that unfolds in the darkness</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Powered by StoryHatch &copy; 2025</p>
+      <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Story Creation Section (Initially Hidden) -->
+  <section id="story-creation" style="display:none;">
+    <div class="progress-bar">
+      <div class="progress" id="creation-progress"></div>
+    </div>
+    
+    <header class="creation-header">
+      <h1>Create Your Story!</h1>
+      <p>Bring your imagination to life</p>
+    </header>
+
+    <!-- Character Selection Section HTML -->
+    <section class="character-selection">
+      <h2><i class="fas fa-user-astronaut"></i> Select Your Character(s)</h2>
+      <div class="character-options">
+        <button onclick="selectCharacter('Hero')" class="char-btn hero">
+          <span>Hero</span>
+        </button>
+        <button onclick="selectCharacter('Villain')" class="char-btn villain">
+          <span>Villain</span>
+        </button>
+        <button onclick="selectCharacter('Sidekick')" class="char-btn sidekick">
+          <span>Sidekick</span>
+        </button>
+      </div>
+      <div class="custom-character-input">
+        <input type="text" id="customCharacter" class="input-field" placeholder="Add a custom character" />
+        <button onclick="addCustomCharacter()" class="add-btn">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+      <div class="selected-characters" id="character-tags"></div>
+    </section>
+
+    <section class="plot-selection">
+      <h2><i class="fas fa-map-marked-alt"></i> Choose the Plot</h2>
+      <div class="plot-options">
+        <button onclick="selectPlot('Adventure')" class="plot-btn adventure"><span>Adventure</span></button>
+        <button onclick="selectPlot('Fantasy')" class="plot-btn fantasy"><span>Fantasy</span></button>
+        <button onclick="selectPlot('Mystery')" class="plot-btn mystery"><span>Mystery</span></button>
+        <div class="custom-input">
+          <input type="text" id="customPlot" class="input-field" placeholder="Add a custom plot" />
+          <button onclick="addCustomPlot()" class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+      <div class="selected-plots" id="plot-tags"></div>
+    </section>
+
+    <section class="feedback-panel">
+      <div class="feedback-icon"><i class="fas fa-lightbulb"></i></div>
+      <div class="feedback-content">
+        <h2>Story Insights</h2>
+        <p id="diversity-feedback">No story elements selected yet.</p>
+        <p id="custom-feedback">Select characters and plot to get started!</p>
+      </div>
+    </section>
+
+    <nav class="action-buttons">
+      <button onclick="saveStory()" class="action-btn save"><i class="fas fa-save"></i> Save Draft</button>
+      <button onclick="finishStory()" class="action-btn finish"><i class="fas fa-paper-plane"></i> Finish & Share</button>
+      <button onclick="goToHomepage()" class="action-btn cancel"><i class="fas fa-times"></i> Cancel</button>
+    </nav>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
